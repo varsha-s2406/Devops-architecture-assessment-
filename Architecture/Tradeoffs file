@@ -1,1 +1,13 @@
+## Trade-offs
 
+### Microservices vs Monolith
+Microservices improve scalability and flexibility but increase operational complexity.
+
+### EKS vs ECS
+EKS provides better flexibility and control, but requires Kubernetes expertise.
+
+### Multi-region DR
+Improves availability but increases infrastructure cost.
+
+### RDS vs DynamoDB
+RDS ensures relational consistency, but scaling is more complex than NoSQL.
