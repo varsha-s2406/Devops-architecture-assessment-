@@ -1,1 +1,8 @@
-
+The proposed architecture transitions the existing monolithic application into a microservices-based platform deployed on Amazon EKS. This improves scalability, fault isolation, and deployment agility.
+A multi-account AWS structure is implemented using AWS Organizations to separate production, development, security, and shared services. This enhances governance and aligns with PCI-DSS compliance requirements.
+High availability is ensured by deploying the EKS cluster across multiple availability zones and configuring Amazon RDS in Multi-AZ mode with read replicas for scaling read operations.
+To eliminate downtime during deployments, a blue-green deployment strategy is implemented using CI/CD pipelines integrated with Kubernetes rolling updates.
+Disaster recovery is addressed through a multi-region architecture with active-passive failover using Route 53. Database replication across regions ensures minimal data loss.
+Centralized logging and monitoring are implemented using CloudWatch, CloudTrail, and log aggregation into a shared services account, enabling efficient incident response and auditing.
+Secrets are securely managed using AWS Secrets Manager and integrated with EKS using IAM roles for service accounts, ensuring no hardcoded credentials.
+Cost optimization is achieved using auto-scaling, reserved instances, and efficient resource allocation.
