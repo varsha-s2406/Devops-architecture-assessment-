@@ -1,1 +1,8 @@
+## Assumptions
 
+- Application can be refactored into microservices
+- Stateless services are used
+- Traffic is high (8M users/month)
+- AWS is the primary cloud provider
+- PCI compliance is mandatory
+- High availability is required
